@@ -1,0 +1,38 @@
+.App{
+  background-image: url("https://i.natgeofe.com/n/1fcbc190-9968-4466-93b4-f32241c835e3/mount-fuji-clouds-weather-japan_16x9.jpg")
+}
+
+.serach{
+opacity: 0.2;
+color: black;
+margin-right: 20% !important;
+margin-left: 40% !important;
+margin-top: 5%;
+
+}
+.cloudy{
+  display: inline-block;
+  transform: rotate(-90deg);
+  transform-origin: top right;
+
+  margin-left: 50%;
+}
+.info{
+border: 1px solid white;
+
+border-radius: 20px;
+padding: 30px;
+width: 10em !important;
+
+
+}
+.info-text{
+  opacity: 1;
+}
+.d-flex{
+ margin-top: 45vh;
+
+}
+.temp{
+ font-size: 70px;
+}
