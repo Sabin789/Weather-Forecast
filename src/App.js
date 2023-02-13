@@ -1,14 +1,16 @@
 
 import './App.css';
 import SearchBar from './Component/Searchbar';
+import Top from './Component/Top';
 import Weather from './Component/Weather';
 
 function App() {
   return (
-    <div className='App'> 
+    <> 
+    <Top />
      {/* <SearchBar /> */}
      <Weather />
-    </div>
+    </>
   );
 }
 
