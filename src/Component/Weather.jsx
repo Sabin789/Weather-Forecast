@@ -9,7 +9,7 @@ import drop from"../Icons/drop.png"
 import wind  from"../Icons/wind.png"
 import clear from "../Icons/clear-sky.png"
 import cloudy from "../Icons/cloud-computing.png"
-import snow from "../Icons/snowfall.png"
+
 const Weather = () => {
 let [city,setCity]=useState()
 const [query,setQuery]=useState("")
@@ -70,17 +70,14 @@ useEffect(()=>{
 
   console.log(city)
 },[city])
-const getImg=(cloudiness,maxTemp)=>{
+const getImg=(cloudiness)=>{
    if(cloudiness<10){
     return <img className="weather" src={clear}></img>
    }
    if(cloudiness>0){
     return <img className="weather" src={cloudy}></img>
    }
-   if( maxTemp<=0){
-   return  <img className="weather" src={snow}></img>
-  
-}
+
 }
 const toCelsius=(temp)=>{
   let Cel=temp-273.15
@@ -116,7 +113,7 @@ const toCelsius=(temp)=>{
            <p>Max:{toCelsius(weather.main.temp_max)}°C,Min:{toCelsius(weather.main.temp_min)}°C</p>
         </Col>
         <Col sm={12} md={4} lg={4}>
-     {getImg(weather.clouds.all,toCelsius(weather.main.temp_max))}
+     {getImg(weather.clouds.all)}
 
         </Col>
         <Col sm={12} md={4} lg={4}>
